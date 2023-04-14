@@ -1,0 +1,427 @@
+/* Hero */
+
+.hero {
+    height: 820px;
+    background: url(/img/unicorn.png) 50% 215px/1224px 688px no-repeat,
+    url(/img/background_hero.png) center bottom/contain no-repeat;
+
+    &_container {
+        max-width: 80%;
+        margin: -100px auto 100px;
+    }
+
+    &-title-top {
+        @include font03;
+        text-align: center;
+        color: $pink01;
+        margin-top: 0;
+        z-index: -1;
+        position: relative;
+    }
+}
+
+.hero-title-bottom {
+    @include font03;
+    text-align: center;
+    background: linear-gradient(180deg, $green01 45.83%, $green02 45.84%);
+    background-clip: text;
+    color: transparent;
+    z-index: 1;
+    position: relative;
+}
+
+/* Created */ 
+
+.created {
+    height: 820px;
+    background: $pink01 url(/img/unicorns.png);
+
+    &_container {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    &-title {
+        @include font04;
+        text-align: center;
+        color: $white01;
+    }
+
+    &-description {
+        @include font01;
+        text-align: center;
+        color: $white01;
+        text-indent: 25px;
+        padding: 30px 25px 0 25px;
+    
+        &_inner {
+            font-weight: 800;
+        }
+    }
+}
+
+/* Choosing */
+
+.choosing {
+    height: 750px;
+    background: $green01 url(/img/unicorn-shadow.png) 75% bottom no-repeat;
+
+    &_container {
+        max-width: 50%;
+        margin-top: 30px;
+    }
+
+    &-title {
+        @include font05;
+        color: $pink01;
+        padding-right: 17px;
+    }
+
+    &-description {
+        @include font01;
+        color: $pink01;
+        padding: 40px 0;
+    }
+
+    &-btn {
+        @include font06;
+        display: flex;
+        color: $pink01;
+        border: 2px solid $pink01;
+        border-radius: 100px;
+        width: 310px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 34px;
+        background-color: $green01;
+        cursor: pointer;
+    }
+}
+
+/* Opportunities */ 
+
+.opportunities {
+    margin: 50px 0;
+
+    &_box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        row-gap: 100px;
+    }
+
+    &_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+
+    &_content {
+        max-width: 40%;
+        padding-top: 20px;
+    }
+
+    &_title {
+        @include font05;
+        max-width: 75%;
+    
+        &-top {
+            color: $pink01;
+        }
+    
+        &-bottom {
+            color: $green01;
+        }
+    }
+
+    &_description {
+        @include font01;
+        color: $green01;
+        padding-top: 30px;
+    }
+
+    &_icon-scroll {
+        position: relative;
+        padding-top: 40px;
+    }
+}
+
+.icon-scroll {
+    position: absolute;
+    left: 0;
+    top: 65%;
+    width: 16px;
+    height: 24px;
+    box-sizing: border-box;
+    border: 2px solid $green01;
+    border-radius: 40px;
+}
+
+.icon-scroll::before {
+    position: absolute;
+    content: "";
+    left: 40%;
+    top: 45%;
+    width: 4px;
+    height: 0px;
+    box-sizing: border-box;
+    border: 2px solid $green01;
+}
+
+.icon-scroll-title {
+    @include font02;
+    padding-left: 30px;
+    color: $green01;
+}
+
+/* Features */
+
+.features {
+    height: 700px;
+    padding-top: 100px;
+    background: url(/img/unicorn-background.png) center bottom/contain no-repeat,
+    url(/img/background_grey.png) center;
+    
+    &_title {
+        @include font04;
+        text-align: center;
+        color: $pink01;
+        padding: 10px 0;
+    }
+
+    &_description {
+        @include font01;
+        text-align: center;
+        color: $green01;
+        max-width: 70%;
+        margin: 30px auto;
+    
+        &-inner {
+            font-weight: 700;
+            display: inline-block;
+            text-indent: 100px;
+        }
+    }
+}
+
+.features .inner {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Testimonials */
+
+.testimonials .inner {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    &::before {
+        content: url(/img/unicorns_2.png);
+        top: 0;
+        position: absolute;
+    }
+
+    &::after {
+        content: url(/img/unicorns_3.png);
+        bottom: 0;
+        left: 50%;
+        position: absolute;
+    }
+}
+
+.testimonials {
+    height: 1200px;
+    background: linear-gradient(180deg, #FFCCBC 0%, rgba(255, 204, 188, 0) 100%);
+    position: relative;
+
+    &-title {
+        @include font05;
+        text-align: center;
+        color: $white01;
+        margin: 70px 0;
+    }
+
+    &-box {
+        column-count: 3;
+        column-gap: 20px;
+        min-height: 836px;
+        max-width: 960px;
+    }
+
+    &-customerQuote-content {
+        grid-area: quote;
+        margin-bottom: 16px;
+    }
+
+    &-customerQuote-description {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        color: $green01;
+    }
+
+    &-customerPhoto {
+        grid-area: photo;
+        margin: auto auto auto 0;
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    &-customerName {
+        grid-area: name;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: $green01;
+        margin: auto auto auto 0;
+    }
+
+    &-customerPosition {
+        grid-area: position;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: $green01;
+        margin: auto auto auto 0;
+    }
+
+    &-card {
+        display: inline-grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: 
+            "quote quote"
+            "photo name"
+            "photo position";
+        background: $white02;
+        backdrop-filter: blur(12px);
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        min-width: 270px;
+    }
+}
+
+/* Discover */
+
+.discover {
+    height: 700px;
+    padding: 100px 0;
+    position: relative;
+    background: url(/img/background_discover.png) center bottom/contain no-repeat;
+
+    &-content {
+        max-width: 40%;
+    }
+
+    &-title {
+        @include font05;
+        color: $green01;
+        margin-bottom: 30px;
+    }
+
+    &-description {
+        @include font01;
+        color: $green01;
+    }
+
+    & .inner {
+        display: flex;
+        justify-content: flex-end;
+        background: url(/img/unicorn-discover_1.png) 2% 0 no-repeat,
+        url(/img/unicorn-discover_2.png) 35% 55% no-repeat,
+        url(/img/unicorn-discover_3.png) 3% 85% no-repeat;
+    }
+}
+
+.discover-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 34px;
+    border: 2px solid #0B4141;
+    border-radius: 100px;
+    background-color: $white01;
+    @include font06;
+    color: $green01;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+/* Apps */
+
+.apps {
+    height: 750px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(51.34deg, #FFCCBC 10.28%, #FFFFFF 64.41%);
+        opacity: 0.9;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+
+    &-content {
+        max-width: 40%;
+    }
+
+    &-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    &-title {
+        @include font05;
+        color: $green01;
+        padding-bottom: 40px;
+    }
+
+    &-button {
+        @include font06;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $green01;
+        border: 2px solid $green01;
+        border-radius: 100px;
+        padding: 12px 34px;
+        background-color: inherit;
+        cursor: pointer;
+        margin-top: 50px;
+    }
+
+    &-description {
+        @include font01;
+        color: $green01;
+
+        &-inner {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 133%;
+            color: $green01;
+        }
+    }
+
+    & .inner {
+        display: flex;
+        justify-content: flex-start;
+        background: url(/img/unicorns_4.png) right bottom no-repeat;
+    }
+}

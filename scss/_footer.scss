@@ -1,0 +1,66 @@
+.footer {
+    background: $green01;
+    padding: 230px 0 100px 0;
+
+    &-title {
+        @include font04;
+        text-align: center;
+        color: $pink01;
+    }
+
+    &-buttons {
+        display: flex;
+        column-gap: 50px;
+        padding: 70px 0 100px;
+    }
+
+    &-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 21px 40px;
+        width: 264px;
+        height: 82px;
+        border-radius: 300px;
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 125%;
+        color: $pink01;
+        background-color: $green01;
+        border-top: 2px solid $pink01;
+        border-right: 2px solid $pink01;
+        border-left: 2px solid $pink01;
+        border-bottom: 2px solid $green01;
+        cursor: pointer;
+    }
+
+    &-logo {
+        margin-right: 12px;
+    }
+
+    & .inner {
+        display: flex;
+        flex-direction: column;
+        max-height: 500px;
+    }
+
+    &-bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+.logo-icon_footer {
+    fill: $pink01;
+    width: 101px;
+    height: 24px;
+}
+
+.logo-description {
+    @include font02;
+    color: $pink01;
+}

@@ -1,0 +1,52 @@
+.header {
+    height: 60px;
+    padding: 20px 0;
+}
+
+
+.inner {
+    @include inner;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-icon_header {
+    fill: $green01;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+
+
+    &-item {
+        display: inline;
+        @include font02;
+        text-align: center;
+        padding: 12px 20px 12px 0;
+    }
+
+    &-link {
+        text-decoration: none;
+        color: $green01;
+    }
+}
+
+.download-btn {
+    width: 163px;
+    height: 46px;
+    background: $green01;
+    border-radius: 124px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-link {
+    text-decoration: none;
+    color: $pink01;
+    @include font02;
+}
